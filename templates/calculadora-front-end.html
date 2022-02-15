@@ -1,0 +1,165 @@
+<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->
+<h1 style="color: #5e9ca0;">Calculadora de Aluguel da cidade do Rio de Janeiro</h1>
+<h2 style="color: #2e6c80;">Adicione abaixo caracteristicas do apartamento e receba o valor do aluguel!</h2>
+<!-- Make all text above in the same color pallete: -->
+<h4 style="color: #25405f;">
+    <form action="{{ url_for('calcular') }}" method="post">
+        <p><strong>&Aacute;rea (m<sup>2</sup>):</strong></p>
+        <p><input name="area" type="number" value='65'/></p>
+        <p><strong>Quartos:&nbsp;</strong></p>
+        <p><input name="quartos" type="number" value='2'/></p>
+        <p><strong>Vagas:&nbsp;</strong></p>
+        <p><input name="vagas" type="number" value='1'/></p>
+        <p><strong>Banheiros:&nbsp;</strong></p>
+        <p><input name="banheiros" type="number" value='1'/></p>
+        <p><strong>Bairro:&nbsp;</strong></p>
+        <p><input id="bairros" list="bairros-list" name="bairro" type="text" /></p>
+            <datalist id="bairros-list">
+                <option value="Abolição">
+                <option value="Anchieta">
+                <option value="Andaraí">
+                <option value="Anil">
+                <option value="Arpoador">
+                <option value="Bancários">
+                <option value="Bangu">
+                <option value="BarradaTijuca">
+                <option value="BarrosFilho">
+                <option value="Benfica">
+                <option value="BentoRibeiro">
+                <option value="Bonsucesso">
+                <option value="Botafogo">
+                <option value="BrazdePina">
+                <option value="BrásdePina">
+                <option value="Cachambi">
+                <option value="Cacuia">
+                <option value="Caju">
+                <option value="Camorim">
+                <option value="Campinho">
+                <option value="CampoGrande">
+                <option value="Cascadura">
+                <option value="Castelo">
+                <option value="Catete">
+                <option value="Catumbi">
+                <option value="Cavalcânti">
+                <option value="Centro">
+                <option value="CidadeNova">
+                <option value="CoelhoNeto">
+                <option value="Colégio">
+                <option value="Copacabana">
+                <option value="Cordovil">
+                <option value="CosmeVelho">
+                <option value="Cosmos">
+                <option value="Curicica">
+                <option value="DelCastilho">
+                <option value="Encantado">
+                <option value="EngenheiroLeal">
+                <option value="EngenhoDaRainha">
+                <option value="EngenhoDeDentro">
+                <option value="EngenhoNovo">
+                <option value="Estacio">
+                <option value="Flamengo">
+                <option value="Freguesia">
+                <option value="Freguesia-Jacarepaguá">
+                <option value="Fátima">
+                <option value="Gamboa">
+                <option value="Glória">
+                <option value="Grajaú">
+                <option value="Grumari">
+                <option value="Guadalupe">
+                <option value="Guaratiba">
+                <option value="Gávea">
+                <option value="Higienópolis">
+                <option value="HonórioGurgel">
+                <option value="Humaitá">
+                <option value="IlhadoGovernador">
+                <option value="Inhaúma">
+                <option value="Inhoaíba">
+                <option value="Ipanema">
+                <option value="Irajá">
+                <option value="Itanhangá">
+                <option value="Jacarepaguá">
+                <option value="Jacaré">
+                <option value="JardimAmérica">
+                <option value="JardimBotânico">
+                <option value="JardimCarioca">
+                <option value="JardimGuanabara">
+                <option value="JardimOceanico">
+                <option value="JardimSulacap">
+                <option value="Lagoa">
+                <option value="Lapa">
+                <option value="Laranjeiras">
+                <option value="Leblon">
+                <option value="Leme">
+                <option value="LinsdeVasconcelos">
+                <option value="Madureira">
+                <option value="MagalhãesBastos">
+                <option value="Manguinhos">
+                <option value="Maracanã">
+                <option value="MarechalHermes">
+                <option value="MariadaGraça">
+                <option value="Moneró">
+                <option value="Méier">
+                <option value="Olaria">
+                <option value="OswaldoCruz">
+                <option value="Paciência">
+                <option value="ParadadeLucas">
+                <option value="Pavuna">
+                <option value="Pechincha">
+                <option value="Penha">
+                <option value="PenhaCircular">
+                <option value="Piedade">
+                <option value="Pilares">
+                <option value="Pitangueiras">
+                <option value="Portuguesa">
+                <option value="PraiadaBandeira">
+                <option value="PraçaSeca">
+                <option value="PraçadaBandeira">
+                <option value="QuintinoBocaiúva">
+                <option value="Ramos">
+                <option value="Realengo">
+                <option value="RecreioDosBandeirantes">
+                <option value="Riachuelo">
+                <option value="Ribeira">
+                <option value="RicardodeAlbuquerque">
+                <option value="RioComprido">
+                <option value="Rocha">
+                <option value="RochaMiranda">
+                <option value="Sampaio">
+                <option value="SantaCruz">
+                <option value="SantaTeresa">
+                <option value="SantoCristo">
+                <option value="Santíssimo">
+                <option value="Saúde">
+                <option value="SenadorCamará">
+                <option value="SenadorVasconcelos">
+                <option value="Sepetiba">
+                <option value="SãoConrado">
+                <option value="SãoCristóvão">
+                <option value="SãoFranciscoXavier">
+                <option value="Tanque">
+                <option value="Taquara">
+                <option value="Tauá">
+                <option value="Tijuca">
+                <option value="TodososSantos">
+                <option value="TomásCoelho">
+                <option value="Turiaçu">
+                <option value="Urca">
+                <option value="VargemGrande">
+                <option value="VargemPequena">
+                <option value="VicentedeCarvalho">
+                <option value="Vidigal">
+                <option value="VigárioGeral">
+                <option value="VilaIsabel">
+                <option value="VilaKosmos">
+                <option value="VilaValqueire">
+                <option value="ViladaPenha">
+                <option value="VistaAlegre">
+                <option value="ÁguaSanta">
+            </datalist>
+    <!--- Adicione botão de calcular, que envia dados acima inseridos para back-end.py -->
+        <input type="submit" value="Calcular">
+
+    </form>
+</h3>
+</body>
+</html>
